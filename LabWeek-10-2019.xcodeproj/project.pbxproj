@@ -15,6 +15,9 @@
 		6E149DDD235E24EC001A9174 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E149DDB235E24EC001A9174 /* LaunchScreen.storyboard */; };
 		6E149DE8235E24ED001A9174 /* LabWeek_10_2019Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E149DE7235E24ED001A9174 /* LabWeek_10_2019Tests.swift */; };
 		6E149DF3235E24ED001A9174 /* LabWeek_10_2019UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E149DF2235E24ED001A9174 /* LabWeek_10_2019UITests.swift */; };
+		6E149E01235E3C32001A9174 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E149E00235E3C32001A9174 /* Enemy.swift */; };
+		6E149E03235E3C5D001A9174 /* NPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E149E02235E3C5D001A9174 /* NPC.swift */; };
+		6E149E05235E3C78001A9174 /* Artifact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E149E04235E3C78001A9174 /* Artifact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		6E149DEE235E24ED001A9174 /* LabWeek-10-2019UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LabWeek-10-2019UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E149DF2235E24ED001A9174 /* LabWeek_10_2019UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabWeek_10_2019UITests.swift; sourceTree = "<group>"; };
 		6E149DF4235E24ED001A9174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E149E00235E3C32001A9174 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		6E149E02235E3C5D001A9174 /* NPC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPC.swift; sourceTree = "<group>"; };
+		6E149E04235E3C78001A9174 /* Artifact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artifact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				6E149DDB235E24EC001A9174 /* LaunchScreen.storyboard */,
 				6E149DDE235E24EC001A9174 /* Info.plist */,
 				6E149DD8235E24EC001A9174 /* Preview Content */,
+				6E149E00235E3C32001A9174 /* Enemy.swift */,
+				6E149E02235E3C5D001A9174 /* NPC.swift */,
+				6E149E04235E3C78001A9174 /* Artifact.swift */,
 			);
 			path = "LabWeek-10-2019";
 			sourceTree = "<group>";
@@ -267,7 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E149E01235E3C32001A9174 /* Enemy.swift in Sources */,
+				6E149E05235E3C78001A9174 /* Artifact.swift in Sources */,
 				6E149DD3235E24E9001A9174 /* ContentView.swift in Sources */,
+				6E149E03235E3C5D001A9174 /* NPC.swift in Sources */,
 				6E149DD1235E24E9001A9174 /* AppDelegate.swift in Sources */,
 				6E149DD5235E24E9001A9174 /* Experience.rcproject in Sources */,
 			);

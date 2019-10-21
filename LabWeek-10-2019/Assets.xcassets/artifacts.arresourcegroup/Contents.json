@@ -1,0 +1,14 @@
+{
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "resources" : [
+    {
+      "filename" : "amulet-of-kroog.arreferenceimage"
+    },
+    {
+      "filename" : "celestial-sword.arreferenceimage"
+    }
+  ]
+}
