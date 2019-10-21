@@ -50,7 +50,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         guard let imageAnchor = anchor as? ARImageAnchor else { return nil }
         guard let name = imageAnchor.referenceImage.name else { return nil }
-        guard let enemy = enemy[name] else { return nil }
+        guard let enemy = enemies[name] else { return nil }
 
         let plane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width, height: imageAnchor.referenceImage.physicalSize.height)
         plane.firstMaterial?.diffuse.contents = UIColor.clear
