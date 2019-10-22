@@ -1,5 +1,5 @@
 //
-//  Enemy.swift
+//  Foe.swift
 //  LabWeek-10-2019
 //
 //  Created by Pete Schuster on 10/21/19.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Emeny: Decodable {
+struct Foe: Decodable {
     let name: String
 }

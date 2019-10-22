@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D24A977235E74CD005E47A3 /* Foe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D24A976235E74CD005E47A3 /* Foe.swift */; };
+		6D24A97A235E76BE005E47A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D24A978235E76BD005E47A3 /* Main.storyboard */; };
 		6E149DD1235E24E9001A9174 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E149DD0235E24E9001A9174 /* AppDelegate.swift */; };
 		6E149DD3235E24E9001A9174 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E149DD2235E24E9001A9174 /* ContentView.swift */; };
 		6E149DD7235E24EC001A9174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E149DD6235E24EC001A9174 /* Assets.xcassets */; };
@@ -14,10 +16,9 @@
 		6E149DDD235E24EC001A9174 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E149DDB235E24EC001A9174 /* LaunchScreen.storyboard */; };
 		6E149DE8235E24ED001A9174 /* LabWeek_10_2019Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E149DE7235E24ED001A9174 /* LabWeek_10_2019Tests.swift */; };
 		6E149DF3235E24ED001A9174 /* LabWeek_10_2019UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E149DF2235E24ED001A9174 /* LabWeek_10_2019UITests.swift */; };
-		6E149E01235E3C32001A9174 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E149E00235E3C32001A9174 /* Enemy.swift */; };
 		6E149E03235E3C5D001A9174 /* NPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E149E02235E3C5D001A9174 /* NPC.swift */; };
 		6E149E05235E3C78001A9174 /* Artifact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E149E04235E3C78001A9174 /* Artifact.swift */; };
-		6E149E07235E3F9C001A9174 /* enemies.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E149E06235E3F9C001A9174 /* enemies.json */; };
+		6E149E07235E3F9C001A9174 /* foes.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E149E06235E3F9C001A9174 /* foes.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D24A976235E74CD005E47A3 /* Foe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foe.swift; sourceTree = "<group>"; };
+		6D24A979235E76BD005E47A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E149DCD235E24E9001A9174 /* LabWeek-10-2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LabWeek-10-2019.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E149DD0235E24E9001A9174 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E149DD2235E24E9001A9174 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,10 +54,9 @@
 		6E149DEE235E24ED001A9174 /* LabWeek-10-2019UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LabWeek-10-2019UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E149DF2235E24ED001A9174 /* LabWeek_10_2019UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabWeek_10_2019UITests.swift; sourceTree = "<group>"; };
 		6E149DF4235E24ED001A9174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6E149E00235E3C32001A9174 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		6E149E02235E3C5D001A9174 /* NPC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPC.swift; sourceTree = "<group>"; };
 		6E149E04235E3C78001A9174 /* Artifact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artifact.swift; sourceTree = "<group>"; };
-		6E149E06235E3F9C001A9174 /* enemies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = enemies.json; sourceTree = "<group>"; };
+		6E149E06235E3F9C001A9174 /* foes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = foes.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,16 +107,17 @@
 		6E149DCF235E24E9001A9174 /* LabWeek-10-2019 */ = {
 			isa = PBXGroup;
 			children = (
+				6D24A978235E76BD005E47A3 /* Main.storyboard */,
 				6E149DD0235E24E9001A9174 /* AppDelegate.swift */,
 				6E149DD2235E24E9001A9174 /* ContentView.swift */,
 				6E149DD6235E24EC001A9174 /* Assets.xcassets */,
 				6E149DDB235E24EC001A9174 /* LaunchScreen.storyboard */,
 				6E149DDE235E24EC001A9174 /* Info.plist */,
 				6E149DD8235E24EC001A9174 /* Preview Content */,
-				6E149E00235E3C32001A9174 /* Enemy.swift */,
 				6E149E02235E3C5D001A9174 /* NPC.swift */,
 				6E149E04235E3C78001A9174 /* Artifact.swift */,
-				6E149E06235E3F9C001A9174 /* enemies.json */,
+				6E149E06235E3F9C001A9174 /* foes.json */,
+				6D24A976235E74CD005E47A3 /* Foe.swift */,
 			);
 			path = "LabWeek-10-2019";
 			sourceTree = "<group>";
@@ -250,8 +253,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E149DDD235E24EC001A9174 /* LaunchScreen.storyboard in Resources */,
+				6D24A97A235E76BE005E47A3 /* Main.storyboard in Resources */,
 				6E149DDA235E24EC001A9174 /* Preview Assets.xcassets in Resources */,
-				6E149E07235E3F9C001A9174 /* enemies.json in Resources */,
+				6E149E07235E3F9C001A9174 /* foes.json in Resources */,
 				6E149DD7235E24EC001A9174 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,9 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E149E01235E3C32001A9174 /* Enemy.swift in Sources */,
 				6E149E05235E3C78001A9174 /* Artifact.swift in Sources */,
 				6E149DD3235E24E9001A9174 /* ContentView.swift in Sources */,
+				6D24A977235E74CD005E47A3 /* Foe.swift in Sources */,
 				6E149E03235E3C5D001A9174 /* NPC.swift in Sources */,
 				6E149DD1235E24E9001A9174 /* AppDelegate.swift in Sources */,
 			);
@@ -317,6 +321,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		6D24A978235E76BD005E47A3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D24A979235E76BD005E47A3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		6E149DDB235E24EC001A9174 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -448,6 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"LabWeek-10-2019/Preview Content\"";
+				DEVELOPMENT_TEAM = J375V69B5X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "LabWeek-10-2019/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -467,6 +480,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"LabWeek-10-2019/Preview Content\"";
+				DEVELOPMENT_TEAM = J375V69B5X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "LabWeek-10-2019/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

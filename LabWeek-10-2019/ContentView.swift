@@ -12,16 +12,14 @@ import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
-    var npcs = [String: NPC]()
-    var enemies = [String: Enemy]()
-    var artifacts = [String: Artifact]()
+    var foes = [String: Foe]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Set the view's delegate
         sceneView.delegate = self
-//        loadData()
+        loadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,7 +28,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Create a session configuration
         let configuration = ARImageTrackingConfiguration()
 
-        guard let trackingImages = ARReferenceImage.referenceImages(inGroupNamed: "scientists", bundle: nil) else {
+        guard let trackingImages = ARReferenceImage.referenceImages(inGroupNamed: "foes", bundle: nil) else {
             fatalError("Couldn't load tracking images")
         }
 
@@ -50,7 +48,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         guard let imageAnchor = anchor as? ARImageAnchor else { return nil }
         guard let name = imageAnchor.referenceImage.name else { return nil }
-        guard let enemy = enemies[name] else { return nil }
+        guard let foe = foes[name] else { return nil }
 
         let plane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width, height: imageAnchor.referenceImage.physicalSize.height)
         plane.firstMaterial?.diffuse.contents = UIColor.clear
@@ -63,7 +61,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
         let spacing: Float = 0.005
 
-        let titleNode = textNode(enemy.name, font: UIFont.boldSystemFont(ofSize: 10))
+        let titleNode = textNode(foe.name, font: UIFont.boldSystemFont(ofSize: 10))
         titleNode.pivotOnTopLeft()
 
         titleNode.position.x += Float(plane.width / 2) + spacing
@@ -71,12 +69,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
         planeNode.addChildNode(titleNode)
 
-
         return node
     }
 
     func loadData() {
-        guard let url = Bundle.main.url(forResource: "enemies", withExtension: "json") else {
+        guard let url = Bundle.main.url(forResource: "foes", withExtension: "json") else {
             fatalError("Unable to find JSON in bundle")
         }
 
@@ -86,11 +83,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
         let decoder = JSONDecoder()
 
-        guard let loadedEnemies = try? decoder.decode([String: Enemy].self, from: data) else {
+        guard let loadedFoes = try? decoder.decode([String: Foe].self, from: data) else {
             fatalError("Unable to parse JSON.")
         }
 
-        enemies = loadedEnemies
+        foes = loadedFoes
     }
 
     func textNode(_ str: String, font: UIFont, maxWidth: Int? = nil) -> SCNNode {
