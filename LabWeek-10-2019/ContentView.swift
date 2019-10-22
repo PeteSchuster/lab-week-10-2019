@@ -6,44 +6,38 @@
 //  Copyright © 2019 Hacking with Swift. All rights reserved.
 //
 
-import UIKit
-import SceneKit
+import SwiftUI
+import RealityKit
 import ARKit
+
+struct ContentView : View {
+    var foes = [String: Foe]()
+    @State var totalClicked: Int = 0
+
+    var body: some View {
+        ZStack {
+            ARViewContainer().edgesIgnoringSafeArea(.all)
+            VStack {
+                Text("\(totalClicked)")
+                Button(action: {self.totalClicked = self.totalClicked + 1}) {
+                    Text("Increment Total")
+                }
+            }
+        }
+    }
+}
+
+#if DEBUG
+struct ContentView_Previews : PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+#endif
 
 class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     var foes = [String: Foe]()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Set the view's delegate
-        sceneView.delegate = self
-        loadData()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // Create a session configuration
-        let configuration = ARImageTrackingConfiguration()
-
-        guard let trackingImages = ARReferenceImage.referenceImages(inGroupNamed: "foes", bundle: nil) else {
-            fatalError("Couldn't load tracking images")
-        }
-
-        configuration.trackingImages = trackingImages
-
-        // Run the view's session
-        sceneView.session.run(configuration)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        // Pause the view's session
-        sceneView.session.pause()
-    }
 
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         guard let imageAnchor = anchor as? ARImageAnchor else { return nil }

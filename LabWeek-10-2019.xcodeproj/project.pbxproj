@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6D24A977235E74CD005E47A3 /* Foe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D24A976235E74CD005E47A3 /* Foe.swift */; };
-		6D24A97A235E76BE005E47A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D24A978235E76BD005E47A3 /* Main.storyboard */; };
+		6D8D7710235F3A4D003667DC /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D770F235F3A4D003667DC /* ARViewContainer.swift */; };
 		6E149DD1235E24E9001A9174 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E149DD0235E24E9001A9174 /* AppDelegate.swift */; };
 		6E149DD3235E24E9001A9174 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E149DD2235E24E9001A9174 /* ContentView.swift */; };
 		6E149DD7235E24EC001A9174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E149DD6235E24EC001A9174 /* Assets.xcassets */; };
@@ -40,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		6D24A976235E74CD005E47A3 /* Foe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foe.swift; sourceTree = "<group>"; };
-		6D24A979235E76BD005E47A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6D8D770F235F3A4D003667DC /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
 		6E149DCD235E24E9001A9174 /* LabWeek-10-2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LabWeek-10-2019.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E149DD0235E24E9001A9174 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E149DD2235E24E9001A9174 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D8D770E235F3A24003667DC /* components */ = {
+			isa = PBXGroup;
+			children = (
+				6D8D770F235F3A4D003667DC /* ARViewContainer.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		6E149DC4235E24E9001A9174 = {
 			isa = PBXGroup;
 			children = (
@@ -107,7 +115,7 @@
 		6E149DCF235E24E9001A9174 /* LabWeek-10-2019 */ = {
 			isa = PBXGroup;
 			children = (
-				6D24A978235E76BD005E47A3 /* Main.storyboard */,
+				6D8D770E235F3A24003667DC /* components */,
 				6E149DD0235E24E9001A9174 /* AppDelegate.swift */,
 				6E149DD2235E24E9001A9174 /* ContentView.swift */,
 				6E149DD6235E24EC001A9174 /* Assets.xcassets */,
@@ -253,7 +261,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E149DDD235E24EC001A9174 /* LaunchScreen.storyboard in Resources */,
-				6D24A97A235E76BE005E47A3 /* Main.storyboard in Resources */,
 				6E149DDA235E24EC001A9174 /* Preview Assets.xcassets in Resources */,
 				6E149E07235E3F9C001A9174 /* foes.json in Resources */,
 				6E149DD7235E24EC001A9174 /* Assets.xcassets in Resources */,
@@ -286,6 +293,7 @@
 				6D24A977235E74CD005E47A3 /* Foe.swift in Sources */,
 				6E149E03235E3C5D001A9174 /* NPC.swift in Sources */,
 				6E149DD1235E24E9001A9174 /* AppDelegate.swift in Sources */,
+				6D8D7710235F3A4D003667DC /* ARViewContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,14 +329,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6D24A978235E76BD005E47A3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6D24A979235E76BD005E47A3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6E149DDB235E24EC001A9174 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
